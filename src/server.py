@@ -9,7 +9,7 @@ CORS(app)
 @app.route('/<string:sentence>', methods=['GET'])
 
 def get_music(sentence):
-    song = Miro(sentence)
+    song = Miro.response_with_lyrics(sentence)
     return jsonify(song)
 
 if __name__ == '__main__':
